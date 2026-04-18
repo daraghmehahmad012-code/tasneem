@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>For Tasneem ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #000000, #1a1a1a);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.container {
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+img {
+  width: 80%;
+  max-width: 400px;
+  margin: 25px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  transition: 0.5s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.final {
+  font-size: 22px;
+  margin-top: 40px;
+  color: #ffd700;
+}
+</style>
+
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1 class="fade">Tasneem ❤️</h1>
+<p class="fade">هاي الصفحة إلك… وبس إلك</p>
+
+  <img src="img1.jpg" style="width:80%; max-width:400px; margin:20px; border-radius:15px;">
+  
+
+  <img src="img2.jpg" style="width:80%; max-width:400px; margin:20px; border-radius:15px;">
+  <p> صرتي ٢١، بحب فكرة إنه بنكبر مع بعض</p>
+
+  <img src="img3.jpg" style="width:80%; max-width:400px; margin:20px; border-radius:15px;">
+
+  <img src="img4.jpg" style="width:80%; max-width:400px; margin:20px; border-radius:15px;">
+  <p>عشان تضلي في حضني دايماّ🫂💕</p>
+
+<p class="final fade">
+Happy Birthday My Love ❤️<br>
+Forever yours, Ahmed
+</p>
+
+</div>
+
+<script>
+const elements = document.querySelectorAll('.fade');
+
+function showOnScroll() {
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < trigger) {
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+</script>
+
+</body>
+</html>
