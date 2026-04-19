@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Tasneem ❤️</title>
     <style>
+        /* تعريف حركة الظهور */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         body { 
             margin: 0; 
             background: linear-gradient(to bottom, #000000, #1a1a1a); 
@@ -14,8 +26,22 @@
             text-align: center; 
             overflow-x: hidden;
         }
+        
         .container { padding: 40px 20px; }
         
+        /* كلاس لتطبيق الحركة */
+        .animate {
+            opacity: 0;
+            animation: fadeInUp 1.2s ease forwards;
+        }
+
+        /* توقيتات الظهور */
+        .delay-1 { animation-delay: 0.5s; }
+        .delay-2 { animation-delay: 1.5s; }
+        .delay-3 { animation-delay: 2.5s; }
+        .delay-4 { animation-delay: 3.5s; }
+        .delay-5 { animation-delay: 4.5s; }
+
         h1 { font-size: 35px; margin-top: 30px; color: #fff; text-shadow: 2px 2px 10px rgba(255,255,255,0.3); }
         
         p { font-size: 19px; line-height: 1.6; margin: 25px 0; opacity: 0.9; }
@@ -44,7 +70,7 @@
             margin-top: 30px;
             width: 80%;
             max-width: 300px;
-            filter: invert(1); /* عشان يتناسب مع الثيم الغامق */
+            filter: invert(1);
             opacity: 0.7;
         }
     </style>
@@ -52,28 +78,30 @@
 <body>
 
     <div class="container">
-        <h1>Tasneem ❤️</h1>
-        <p>هاي الصفحة إلك... وبس إلك</p>
-        <p>
-كل عام وأنتِ بقلبي، واليوم كبرتِ سنة وكبر معكِ حُبّك في قلبي.. اليوم صار عمرك 21، العمر اللي بتزهري فيه أكتر وأكتر. حبيت أهديكِ شي بضلّ معك وبشبهك بجماله وبساطته، هاد الموقع هو مكانك الخاص، حبيت اعمل فيه ذكريات النا. كل عام وأنتِ أجمل تسنيم بالدنيا، وكل سنة وإحنا بنكبر مع بعض.
-</p>
-        <img src="img1.jpg" class="photo-frame">
-        <img src="img2.jpg" class="photo-frame">
+        <h1 class="animate delay-1">Tasneem ❤️</h1>
+        <p class="animate delay-1">هاي الصفحة إلك... وبس إلك</p>
         
-        <p>كل سنة واحنا لبعض.. <br> وكل سنة وإحنا أجمل ذكريات لبعض</p>
+        <p class="animate delay-2">
+            كل عام وأنتِ بقلبي، واليوم كبرتِ سنة وكبر معكِ حُبّك في قلبي.. اليوم صار عمرك 21، العمر اللي بتزهري فيه أكتر وأكتر. حبيت أهديكِ شي بضلّ معك وبشبهك بجماله وبساطته، هاد الموقع هو مكانك الخاص، حبيت اعمل فيه ذكريات النا. كل عام وأنتِ أجمل تسنيم بالدنيا، وكل سنة وإحنا بنكبر مع بعض.
+        </p>
+
+        <img src="img1.jpg" class="photo-frame animate delay-2">
+        <img src="img2.jpg" class="photo-frame animate delay-3">
         
-        <img src="img3.jpg" class="photo-frame">
-        <img src="img4.jpg" class="photo-frame">
+        <p class="animate delay-3">كل سنة واحنا لبعض.. <br> وكل سنة وإحنا أجمل ذكريات لبعض</p>
         
-        <p> في حضني دائماً 🫂💕<br> لكي نبقى معاً للأبد</p>
+        <img src="img3.jpg" class="photo-frame animate delay-4">
+        <img src="img4.jpg" class="photo-frame animate delay-4">
         
-        <div class="final-msg">
+        <p class="animate delay-5"> في حضني دائماً 🫂💕<br> لكي نبقى معاً للأبد</p>
+        
+        <div class="final-msg animate delay-5">
             Happy Birthday My Love ❤️<br>
             <span style="font-size: 16px;">Forever yours, Ahmed</span>
         </div>
 
-        <audio src="song.mp3" controls loop autoplay></audio>
-        <p style="font-size: 12px; opacity: 0.5;">(اضغطي Play لتسمعي الفويس 🎵)</p>
+        <audio src="song.mp3" id="bgMusic" controls loop autoplay class="animate delay-5"></audio>
+        <p class="animate delay-5" style="font-size: 12px; opacity: 0.5;">(اضغطي Play لتسمعي الفويس 🎙️)</p>
     </div>
 
 </body>
