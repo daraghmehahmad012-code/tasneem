@@ -3,7 +3,7 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>For Tasneem ❤️</title>
     <style>
         /* تعريف حركة الظهور */
@@ -25,17 +25,18 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             text-align: center; 
             overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent; /* إزالة لون التحديد الأزرق عند اللمس في Safari */
         }
         
         .container { padding: 40px 20px; }
         
-        /* كلاس لتطبيق الحركة */
+        /* كلاس لتطبيق الحركة عند التحميل */
         .animate {
             opacity: 0;
             animation: fadeInUp 1.2s ease forwards;
         }
 
-        /* توقيتات الظهور */
+        /* توقيتات الظهور تدريجياً */
         .delay-1 { animation-delay: 0.5s; }
         .delay-2 { animation-delay: 1.5s; }
         .delay-3 { animation-delay: 2.5s; }
@@ -49,13 +50,20 @@
         .photo-frame {
             width: 90%;
             max-width: 450px;
-            margin: 20px auto;
+            margin: 30px auto;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(255,255,255,0.1);
             display: block;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease; /* سرعة استجابة التكبير */
+            cursor: pointer;
         }
-        .photo-frame:hover { transform: scale(1.02); }
+
+        /* تأثير اللمس والتكبير (يعمل على الكمبيوتر والموبايل) */
+        .photo-frame:hover, 
+        .photo-frame:active { 
+            transform: scale(1.05) translateY(-5px); /* تكبير بنسبة 5% مع ارتفاع بسيط */
+            box-shadow: 0 15px 40px rgba(255,255,255,0.2), 0 0 20px rgba(255,255,255,0.1); /* ظل أقوى وأزهى */
+        }
 
         .final-msg {
             color: #ffd700;
